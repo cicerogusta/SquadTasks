@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "464460554955",
+    "firebase_url": "https://noteapp-dee18-default-rtdb.firebaseio.com",
+    "project_id": "noteapp-dee18",
+    "storage_bucket": "noteapp-dee18.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464460554955:android:c564443367cbc0e3f5f14e",
+        "android_client_info": {
+          "package_name": "com.cicerodev.tasks"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMoN84q4AhTFemEfDErQLQjDnY3D689eE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
