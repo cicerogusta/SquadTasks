@@ -2,11 +2,11 @@ package com.cicerodev.tasks.repository.imp
 
 import com.cicerodev.tasks.model.Task
 import com.cicerodev.tasks.model.User
-import com.cicerodev.tasks.repository.AppRepository
+import com.cicerodev.tasks.repository.AppFirebaseRepository
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.tasks.await
 
-class FirestoreAppRepository(private val firestore: FirebaseFirestore): AppRepository {
+class FirestoreAppFirebaseRepository(private val firestore: FirebaseFirestore): AppFirebaseRepository {
     override suspend fun addTask(task: Task): Result<Unit> {
         return try {
             firestore.collection("tasks")

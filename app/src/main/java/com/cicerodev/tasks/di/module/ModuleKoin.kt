@@ -1,8 +1,10 @@
 package com.cicerodev.tasks.di.module
 
-import com.cicerodev.tasks.repository.AppRepository
-import com.cicerodev.tasks.repository.imp.FirestoreAppRepository
-import com.cicerodev.tasks.service.AppService
+import com.cicerodev.tasks.repository.AppApiRepository
+import com.cicerodev.tasks.repository.AppFirebaseRepository
+import com.cicerodev.tasks.repository.imp.ApiAppRepository
+import com.cicerodev.tasks.repository.imp.FirestoreAppFirebaseRepository
+import com.cicerodev.tasks.service.AppFirebaseService
 import com.cicerodev.tasks.ui.viewmodels.NewTaskFragmentViewModel
 import com.cicerodev.tasks.ui.viewmodels.RegisterFragmentViewModel
 import com.cicerodev.tasks.ui.viewmodels.TasksFragmentViewModel
@@ -18,11 +20,11 @@ val appModule = module {
 //    single { AppApiService.create() }
 
     // Repositórios
-    single<AppRepository> { FirestoreAppRepository(get()) }
-//    single<AppRepository> { ApiAppRepository(get()) }
+    single<AppFirebaseRepository> { FirestoreAppFirebaseRepository(get()) }
+    single<AppApiRepository> { ApiAppRepository(get()) }
 
     // Service
-    single { AppService(get()) }
+    single { AppFirebaseService(get()) }
 
     // ViewModel
     viewModel { NewTaskFragmentViewModel(get()) }

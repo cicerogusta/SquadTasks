@@ -2,11 +2,10 @@ package com.cicerodev.tasks.service
 
 import com.cicerodev.tasks.model.Task
 import com.cicerodev.tasks.model.User
-import com.cicerodev.tasks.repository.AppRepository
+import com.cicerodev.tasks.repository.AppFirebaseRepository
 
-class AppService(
-    private val firestoreRepository: AppRepository
-//    private val apiRepository: AppRepository
+class AppFirebaseService(
+    private val firestoreRepository: AppFirebaseRepository
 ) {
      suspend fun createTask(task: Task): Result<Unit> {
        return firestoreRepository.addTask(task)
